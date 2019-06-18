@@ -1,6 +1,6 @@
 import Utils from './utils.js'
 import Config from './config.js'
-import InterfaceList from './../service'
+import InterfaceList from './../service/interface-list.js'
 
 export default {
     install (Vue) {

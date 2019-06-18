@@ -1,5 +1,8 @@
-import Vue from './plugin'
-import '../assets/style/index.scss'
+import Vue from 'vue'
+import vueTools from 'vue-luye-tools'
+import Utils from '../utils'
+
+Vue.use(Utils)
+Vue.use(vueTools)
 
 export default Vue
-

@@ -33,7 +33,7 @@ process.UNI_LIBRARIES.forEach(libraryName => {
       'customName': (name) => {
         return `${libraryName}/lib/${name}/${name}`
       }
-    }
+    },
   ])
 })
 module.exports = {

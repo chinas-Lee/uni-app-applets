@@ -8,10 +8,12 @@
 		},
 		onHide: function() {
 			console.log('App Hide')
-		}
+		},
+		// 小程序全局配置信息
+		globalData: {}
 	}
 </script>
 
-<style>
+<style lang="scss">
 	/*每个页面公共css */
 </style>

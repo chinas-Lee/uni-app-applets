@@ -1,16 +1,52 @@
 {
-	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+	"pages": [
 		{
-			"path": "pages/index/index",
+			"path": "pages/home/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "赴会首页"
 			}
 		}
 	],
+	"subPackages": [
+		{
+			"root": "pages/details/",
+			"pages": [
+				{
+					"path": "index",
+					"style": {
+						"navigationBarTitleText": "赴会"
+					}
+				}
+			]
+		},
+		{
+			"root": "pages/sign-up/",
+			"pages": [
+				{
+					"path": "my-sign-up",
+					"style": {
+						"navigationBarTitleText": "我要报名"
+					}
+				}
+			]
+		}
+	],
+    "preloadRule": {
+        "pages/details/index": {
+            "network": "all",
+            "packages": ["__APP__"]
+        },
+		"pages/sign-up/my-sign-up": {
+		    "network": "all",
+		    "packages": ["pages/details/"]
+		}
+    },
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
+		"navigationBarTitleText": "赴会",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#F8F8F8",
+		"backgroundTextStyle": "dark",
+		"enablePullDownRefresh": true
 	}
 }
